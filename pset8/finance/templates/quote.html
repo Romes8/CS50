@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{%block main%}
+    <h1>Choose your stock. See price for stock.</h1>
+    <form action="/quote" method="post">
+        <div class="form-group">
+           <input type="text" name="symbol" placeholder="Enter stock name : AAPL">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Find</button>
+    </form>
+
+    {% if stock%}
+        <h1>Stock of <span class="nm">{{stock['name']}}</span> with price of: <span class="prc">{{stock['price']}}</span>.</h1>
+    {% endif %}
+
+    <button type="button" class="btn btn-outline-primary" href="/">Back to stats</button>
+
+<style>
+    .prc, .nm{
+        color: green;
+    }
+</style>
+
+{% endblock %}
