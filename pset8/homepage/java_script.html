@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java script</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="calculate.js"></script>
+
+</head>
+
+<body>
+    <h4 class="text">Line under this is created and calculated with JavaScript.</h4>
+    <p> Create formula which result is going to be 8.</p>
+
+    <form onsubmit="calculate(); return false;">
+        <input type="text" id="first">
+        *
+        <input type="text" id="second">
+        = ?
+        <input type="submit" value="Calculate">
+    </form>
+
+    <div>
+        <br>
+        <h3 id="result">Result of the formula is:</h3>
+    </div>
+
+    <div class="alert alert-success" role="alert" id="boots">
+      Result is correct.
+    </div>
+
+    <div class="alert alert-danger" role="alert" id="boot">
+        Incorrect result.
+    </div>
+
+    <br>
+    <hr/>
+    <a href="index.html"><button class="button">Home page</button></a>
+
+
+</body>
+
+<style>
+   body {
+        background-color: #ff9933;
+   }
+
+    .button {
+        background-color:#adad85;
+        float: center;
+        border: 1px solid grey;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 12px;
+        background-color: grey;
+        color:white;
+        border: 2px solid white;
+    }
+
+    .text {
+      color:grey;
+      font-family: 'Amatic SC', cursive;
+      font-size: 20px;
+    }
+
+    .result2 {
+        visibility: hidden;
+        color: green;
+    }
+
+    #congrats {
+        visibility: visible;
+    }
+
+    #boots {
+        visibility: hidden;
+        width: 200px;
+    }
+
+     #boot {
+        visibility: hidden;
+        width: 200px;
+    }
+
+</style>
+
+</html>
